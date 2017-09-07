@@ -13,7 +13,7 @@ create: (req, res) => {
 delete: (req, res) => {
   models.MachineData.findOne({
     where: {
-      id: req.params.id
+      id: req.body.id
     }
   }).then((results) => {
     results.destroy();
